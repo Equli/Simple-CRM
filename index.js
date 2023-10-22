@@ -1,6 +1,5 @@
 const express = require('express');
 const hbs = require('express-handlebars');
-const {handlebarsHelpers} = require('../Konfigurator ciastek/utils/handlebars-helpers');
 const {clientRouter} = require('./routers/client');
 
 const app = express();
