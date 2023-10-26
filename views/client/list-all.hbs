@@ -13,21 +13,31 @@
         <th>
             Data następnego kontaktu:
         </th>
+        <th>
+
+        </th>
     </tr>
     </thead>
     <tbody>
     {{#each clients}}
         <tr>
             <th>
-                {{this.mail}}
+                <a href="mailto:{{this.mail}}" target="_blank">{{this.mail}}</a>
             </th>
             <td>
-                {{this.name}}
+                <a href="/client/{{this.id}}">{{this.name}}</a>
             </td>
             <td>
                 {{this.nextContactAt}}
+            </td>
+            <td>
+                <a href="/client/{{this.id}}">Szczegóły</a>
+                <form method="POST" action="/client/{{this.id}}?_method=DELETE">
+                    <button type="submit">Usuń</button>
+                </form>
             </td>
         </tr>
     {{/each}}
     </tbody>
 </table>
+

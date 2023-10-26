@@ -10,7 +10,10 @@ clientRouter
         });
     })
     .get('/:id', (req,res) => {
-        res.send('Pobierz pojedynczego');
+        // clients.db.getOne(req.params.id);
+        res.render('client/one',{
+            clients: db.getOne(req.params.id)
+        });
     })
     .post('/', (req,res) => {
         res.send('Dodaj');
@@ -18,8 +21,9 @@ clientRouter
     .put('/:id', (req,res) => {
         res.send('Zmodyfikuj');
     })
-    .put('/:id', (req,res) => {
-        res.send('Usuń');
+    .delete('/:id', (req,res) => {
+        db.delete(req.params.id);
+        res.render('client/deleted');
     });
 
 module.exports ={

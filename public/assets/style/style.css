@@ -1,5 +1,7 @@
 table {
     text-align: left;
+    width: 80%;
+    margin: 0 auto;
 }
 
 tr {
@@ -17,4 +19,8 @@ tr:nth-child(2n) {
 td, th {
     padding: 16px;
 
+}
+
+.header-on-left th {
+    background-color: #a4a2a2;
 }
