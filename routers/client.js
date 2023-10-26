@@ -28,6 +28,17 @@ clientRouter
     })
     .get('/form/add', (req,res) => {
         res.render('client/forms/add');
+    })
+    .get('/form/edit/:id', (req,res) => {
+        res.render('client/forms/edit', {
+            clients: db.getOne(req.params.id)
+        });
+    })
+    .put('/:id', (req,res) => {
+        db.update(req.params.id,req.body);
+        res.render('client/edited',{
+            id: req.params.id,
+        });
     });
 
 
