@@ -1,7 +1,7 @@
 const {readFile,writeFile} = require('fs').promises;
 const {join} = require('path');
 const {v4: uuid} = require('uuid');
-const {create} = require('express-handlebars');
+
 
 class Db {
     constructor(dbFileName) {
@@ -18,11 +18,14 @@ class Db {
     }
 
     create(obj) {
+        const id = uuid();
         this._data.push({
-            id: uuid(),
+            id,
             ...obj,
         });
         this._save();
+
+        return id;
     }
 
     getAll() {
