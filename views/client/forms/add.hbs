@@ -1,12 +1,12 @@
 <h2>Dodawanie nowych klientów do bazy</h2>
 <form method="POST" action="/client">
-    <p>
+    <div>
         <label>
             <p>
                 E-mail:
             </p>
             <p>
-                <input type="email" name="mail">
+                <input type="email" name="mail" required>
             </p>
         </label>
         <label>
@@ -14,7 +14,7 @@
                 Imię:
             </p>
             <p>
-                <input type="text" name="name">
+                <input type="text" name="name" required>
             </p>
         </label>
         <label>
@@ -37,5 +37,5 @@
         <p>
             <button type="submit">Zapisz</button>
         </p>
-    </p>
+    </div>
 </form>

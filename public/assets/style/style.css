@@ -5,7 +5,6 @@ table {
 }
 
 tr {
-    max-resolution: 2px;
     background-color: #dad3d3;
 }
 thead tr {
@@ -23,4 +22,12 @@ td, th {
 
 .header-on-left th {
     background-color: #a4a2a2;
+}
+
+.error {
+    background-color: #ffa7a7;
+    border: 2px solid red;
+    padding: 20px;
+    margin: 10px auto;
+    width: 75%;
 }
